@@ -46,6 +46,8 @@ body {
 /* ---------- Business Card ---------- */
 
 .card {
+  position: relative;
+
   width: min(760px, 100%);
 
   background: #ffffff;
@@ -67,6 +69,35 @@ body {
   align-items: center;
 
   padding: 64px;
+}
+
+
+/* ---------- Company Logo ---------- */
+
+.company-logo {
+  position: absolute;
+
+  top: 24px;
+  right: 24px;
+
+  width: 72px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f7f7f7;
+
+  border: 1px solid #e4e4e4;
+
+  color: #aaa;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
 }
 
 
@@ -170,6 +201,7 @@ h1 {
 
 @media (max-width: 640px) {
   .page {
+    min-height: 100svh;
     padding: 20px;
   }
 
@@ -178,7 +210,15 @@ h1 {
 
     gap: 40px;
 
-    padding: 40px;
+    padding: 72px 40px 40px;
+  }
+
+  .company-logo {
+    top: 20px;
+    right: 20px;
+
+    width: 64px;
+    height: 32px;
   }
 
   .photo-placeholder {
