@@ -1,0 +1,191 @@
+/* ---------- Reset ---------- */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family:
+    Inter,
+    "Helvetica Neue",
+    Helvetica,
+    Arial,
+    sans-serif;
+
+  background:
+    radial-gradient(
+      circle at top,
+      #242424 0%,
+      #171717 40%,
+      #101010 100%
+    );
+
+  color: #111;
+}
+
+
+/* ---------- Page ---------- */
+
+.page {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px 24px;
+}
+
+
+/* ---------- Business Card ---------- */
+
+.card {
+  width: min(760px, 100%);
+
+  background: #ffffff;
+
+  border-radius: 4px;
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.35),
+    0 4px 16px rgba(0, 0, 0, 0.18);
+
+  overflow: hidden;
+}
+
+.card-content {
+  display: grid;
+  grid-template-columns: 1fr 180px;
+  gap: 64px;
+
+  align-items: center;
+
+  padding: 64px;
+}
+
+
+/* ---------- Identity ---------- */
+
+.eyebrow {
+  margin: 0 0 14px;
+
+  color: #777;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+
+  color: #111;
+
+  font-size: clamp(42px, 6vw, 64px);
+  font-weight: 500;
+
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+}
+
+.divider {
+  width: 44px;
+  height: 1px;
+
+  margin: 32px 0;
+
+  background: #222;
+}
+
+
+/* ---------- Contact ---------- */
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  margin: 0;
+
+  font-style: normal;
+
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.contact a,
+.contact span {
+  color: #555;
+}
+
+.contact a {
+  width: fit-content;
+
+  text-decoration: none;
+
+  transition:
+    color 160ms ease,
+    transform 160ms ease;
+}
+
+.contact a:hover {
+  color: #000;
+  transform: translateX(2px);
+}
+
+
+/* ---------- Photo ---------- */
+
+.photo-placeholder {
+  aspect-ratio: 4 / 5;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f1f1f1;
+
+  border: 1px solid #e4e4e4;
+
+  color: #aaa;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 640px) {
+  .page {
+    padding: 20px;
+  }
+
+  .card-content {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+
+    padding: 40px;
+  }
+
+  .photo-placeholder {
+    width: 140px;
+  }
+
+  h1 {
+    font-size: 46px;
+  }
+}
